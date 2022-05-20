@@ -13,6 +13,7 @@ sixth line is current status when i created breanch gitrepo
 gitrepo user commit
 
 
+<<<<<<< HEAD
 
 terraform code
 
@@ -32,6 +33,23 @@ resgion = "ap-south-2"
 availability_zone = "ap-south-1b"
 tag {
 name "my_git_instance"
+=======
+day 2 terraform code
+terraform {
+required_provider {
+ami {
+source = "hasicorp/aws"
+version = "~>3.50.0"
+}
+}}
+
+resource "aws_instance" "mygit_instance" {
+instance_type = "t2.micro"
+ami = "amiid"
+region = "ap-south-1"
+tag={
+name = "mygit-instance"
+>>>>>>> gitrepo
 }
 }
 
