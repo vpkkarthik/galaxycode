@@ -11,3 +11,27 @@ sixth line is current status when i created breanch gitrepo
 
 
 gitrepo user commit
+
+
+
+terraform code
+
+terraform {
+required_provider {
+awa {
+source = "hashicorp/aws"
+version = "~>3.50.0"
+}}}
+
+resource creation 
+
+resource "aws_instance" "my_git_instance"{
+ami = "ami_ID"
+instance_type = "t2.micro"
+resgion = "ap-south-2"
+availability_zone = "ap-south-1b"
+tag {
+name "my_git_instance"
+}
+}
+
